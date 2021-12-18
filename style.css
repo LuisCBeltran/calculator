@@ -20,27 +20,27 @@ main .calculator {
   grid-template: "disp disp disp disp" "exp2 exp3 del ac" "root per pi div" "7 8 9 mult" "4 5 6 plus" "1 2 3 plus" "dot 0 eq min";
   width: 335px;
   height: 545px;
-  padding: 25px;
+  padding: 25px 25px 10px 25px;
   background-color: #F7F2E7;
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   border-radius: 10px;
 }
 main .calculator .display {
+  display: flex;
+  justify-content: end;
+  align-items: center;
   grid-area: disp;
   width: 285px;
-  height: 100px;
+  height: 60px;
+  padding: 0 10px;
   margin-bottom: 20px;
   background-color: #E0ECE4;
   border: 2px solid #D8D3CD;
   border-radius: 7px;
 }
-main .calculator .display .display-up {
-  width: 285px;
-  height: 40px;
-}
-main .calculator .display .display-down {
-  width: 285px;
-  height: 60px;
+main .calculator .display .display-nums {
+  font-size: 30px;
+  font-weight: 700;
 }
 main .calculator button {
   width: 60px;

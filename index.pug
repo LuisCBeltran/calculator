@@ -5,14 +5,13 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="style.css")
-        script(src="script.js")
+        
         title Calculator
     body 
         main 
             .calculator
                 .display
-                    .display-up 
-                    .display-down 
+                        p.display-nums#displayNums 0
                 button x²
                 button x³
                 button DEL
@@ -20,20 +19,21 @@ html(lang="en")
                 button ²√x
                 button %
                 button π
-                button /
-                button 7
-                button 8
-                button 9
-                button *
-                button 4
-                button 5
-                button 6
-                button.plus +
-                button 1
-                button 2
-                button 3
+                button(onclick="operation(4)") /
+                button#number7(onclick="pushNumber(7)") 7
+                button#number8(onclick="pushNumber(8)") 8
+                button#number9(onclick="pushNumber(9)") 9
+                button(onclick="operation(3)") *
+                button#number4(onclick="pushNumber(4)") 4
+                button#number5(onclick="pushNumber(5)") 5
+                button#number6(onclick="pushNumber(6)") 6
+                button.plus#plus(onclick="operation(1)") +
+                button#number1(onclick="pushNumber(1)") 1
+                button#number2(onclick="pushNumber(2)") 2
+                button#number3(onclick="pushNumber(3)") 3
                 button .
-                button 0
+                button#number4(onclick="pushNumber(0)") 0
                 button =
-                button -
+                button(onclick="operation(2)") -
+        script(src="script.js")
 

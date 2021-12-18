@@ -16,25 +16,25 @@ main {
                        "dot 0 eq min";
         width: 335px;
         height: 545px;
-        padding: 25px;
+        padding: 25px 25px 10px 25px;
         background-color: v.$body;
         box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
         border-radius: 10px;
         .display {
+            display: flex;
+            justify-content: end;
+            align-items: center;
             grid-area: disp;
             width: 285px;
-            height: 100px;
+            height: 60px;
+            padding: 0 10px;
             margin-bottom: 20px;
             background-color: v.$display;
             border: 2px solid v.$buttons;
             border-radius: 7px;
-            .display-up {
-                width: 285px;
-                height: 40px;
-            }
-            .display-down {
-                width: 285px;
-                height: 60px;
+            .display-nums {
+                font-size: 30px;
+                font-weight: 700;
             }
         }
         button {

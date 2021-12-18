@@ -5,15 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Calculator</title>
   </head>
   <body> 
     <main> 
       <div class="calculator">
         <div class="display">
-          <div class="display-up"> </div>
-          <div class="display-down"> </div>
+          <p class="display-nums" id="displayNums">0</p>
         </div>
         <button>x²</button>
         <button>x³</button>
@@ -22,23 +20,24 @@
         <button>²√x</button>
         <button>%</button>
         <button>π</button>
-        <button>/</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="plus">+</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+        <button onclick="operation(4)">/</button>
+        <button id="number7" onclick="pushNumber(7)">7</button>
+        <button id="number8" onclick="pushNumber(8)">8</button>
+        <button id="number9" onclick="pushNumber(9)">9</button>
+        <button onclick="operation(3)">*</button>
+        <button id="number4" onclick="pushNumber(4)">4</button>
+        <button id="number5" onclick="pushNumber(5)">5</button>
+        <button id="number6" onclick="pushNumber(6)">6</button>
+        <button class="plus" id="plus" onclick="operation(1)">+</button>
+        <button id="number1" onclick="pushNumber(1)">1</button>
+        <button id="number2" onclick="pushNumber(2)">2</button>
+        <button id="number3" onclick="pushNumber(3)">3</button>
         <button>.</button>
-        <button>0</button>
+        <button id="number4" onclick="pushNumber(0)">0</button>
         <button>=</button>
-        <button>-</button>
+        <button onclick="operation(2)">-</button>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
