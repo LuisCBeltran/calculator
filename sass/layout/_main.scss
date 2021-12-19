@@ -32,6 +32,7 @@ main {
             background-color: v.$display;
             border: 2px solid v.$buttons;
             border-radius: 7px;
+            overflow: hidden;
             .display-nums {
                 font-size: 30px;
                 font-weight: 700;

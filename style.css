@@ -37,6 +37,7 @@ main .calculator .display {
   background-color: #E0ECE4;
   border: 2px solid #D8D3CD;
   border-radius: 7px;
+  overflow: hidden;
 }
 main .calculator .display .display-nums {
   font-size: 30px;

@@ -12,13 +12,13 @@ html(lang="en")
             .calculator
                 .display
                         p.display-nums#displayNums 0
-                button x²
-                button x³
-                button DEL
-                button AC
-                button ²√x
+                button#pow2(onclick="power(2)") x²
+                button#pow3(onclick="power(3)") x³
+                button#deleteNum(onclick="deleteNum()") DEL
+                button#reset(onclick="reset()") AC
+                button#square(onclick="square()") ²√x
                 button %
-                button π
+                button#plusMinus(onclick="changeSign()") +/-
                 button(onclick="operation(4)") /
                 button#number7(onclick="pushNumber(7)") 7
                 button#number8(onclick="pushNumber(8)") 8
@@ -31,9 +31,9 @@ html(lang="en")
                 button#number1(onclick="pushNumber(1)") 1
                 button#number2(onclick="pushNumber(2)") 2
                 button#number3(onclick="pushNumber(3)") 3
-                button .
+                button#dot(onclick="pushNumber('.')") .
                 button#number4(onclick="pushNumber(0)") 0
-                button =
+                button#equals(onclick="equals()") =
                 button(onclick="operation(2)") -
         script(src="script.js")
 

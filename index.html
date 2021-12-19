@@ -13,13 +13,13 @@
         <div class="display">
           <p class="display-nums" id="displayNums">0</p>
         </div>
-        <button>x²</button>
-        <button>x³</button>
-        <button>DEL</button>
-        <button>AC</button>
-        <button>²√x</button>
+        <button id="pow2" onclick="power(2)">x²</button>
+        <button id="pow3" onclick="power(3)">x³</button>
+        <button id="deleteNum" onclick="deleteNum()">DEL</button>
+        <button id="reset" onclick="reset()">AC</button>
+        <button id="square" onclick="square()">²√x</button>
         <button>%</button>
-        <button>π</button>
+        <button id="plusMinus" onclick="changeSign()">+/-</button>
         <button onclick="operation(4)">/</button>
         <button id="number7" onclick="pushNumber(7)">7</button>
         <button id="number8" onclick="pushNumber(8)">8</button>
@@ -32,9 +32,9 @@
         <button id="number1" onclick="pushNumber(1)">1</button>
         <button id="number2" onclick="pushNumber(2)">2</button>
         <button id="number3" onclick="pushNumber(3)">3</button>
-        <button>.</button>
+        <button id="dot" onclick="pushNumber('.')">.</button>
         <button id="number4" onclick="pushNumber(0)">0</button>
-        <button>=</button>
+        <button id="equals" onclick="equals()">=</button>
         <button onclick="operation(2)">-</button>
       </div>
     </main>
