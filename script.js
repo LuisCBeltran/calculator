@@ -127,7 +127,6 @@ let savedOperation = function (operator) {
 const equals = function () {
     if (operator > 0 && operator < 5 && result === undefined) {
         savedOperation(operator)
-        operator = 0
     }
 }
 
@@ -147,6 +146,7 @@ const changeSign = function () {
 // Delete
 const deleteNum = function () {
 
+    // Operand 1
     if (operator === 0 && result === undefined && toDisplay.length > 0) {
         toDisplay.pop()
         let stringToDisplay = toDisplay.join('')
@@ -169,7 +169,8 @@ const deleteNum = function () {
 
         console.log(operand1, operand2)
         console.log(toDisplay)
-
+    
+    // Operand 2
     } else if (operator > 0 && operator < 5 && result === undefined && toDisplay.length > 0) {
         
         toDisplay.pop()
@@ -212,23 +213,53 @@ const reset = function () {
 const power = function (exp) {
     if (operator === 0 && result === undefined && toDisplay.length > 0) {
         operand1 = Math.pow(operand1, exp)
-        document.getElementById('displayNums').innerHTML = operand1.toFixed(5)
+        let operand1Fixed = operand1.toFixed(5)
+        let operandString = operand1Fixed.toString()
+        document.getElementById('displayNums').innerHTML = parseFloat(operandString)
 
     } else if (operator !== 0 && result !== undefined) {
         result = Math.pow(result, exp)
-        document.getElementById('displayNums').innerHTML = result.toFixed(5)
+        let resultFixed = result.toFixed(5)
+        let resultString = resultFixed.toString()
+        document.getElementById('displayNums').innerHTML = parseFloat(resultString)
     }
 }
 
 // Square root
-
 const square = function () {
+
     if (operator === 0 && result === undefined && toDisplay.length > 0) {
         operand1 = Math.sqrt(operand1)
-        document.getElementById('displayNums').innerHTML = operand1.toFixed(5)
+        let operand1Fixed = operand1.toFixed(5)
+        let operandString = operand1Fixed.toString()
+        document.getElementById('displayNums').innerHTML = parseFloat(operandString)
 
     } else if (operator !== 0 && result !== undefined) {
         result = Math.sqrt(result)
-        document.getElementById('displayNums').innerHTML = result.toFixed(5)
+        let resultFixed = result.toFixed(5)
+        let resultString = resultFixed.toString()
+        document.getElementById('displayNums').innerHTML = parseFloat(resultString)
+    }
+}
+
+// Percent
+const percent = function () {
+    if (operator === 0 && result === undefined && toDisplay.length > 0) {
+        operand1 = operand1 / 100
+        let operand1Fixed = operand1.toFixed(5)
+        let operandString = operand1Fixed.toString()
+        document.getElementById('displayNums').innerHTML = parseFloat(operandString)
+
+    } else if (operator > 0 && operator < 3 && result === undefined && toDisplay.length > 0) {
+        operand2 = operand2 * operand1 / 100
+        let operand2Fixed = operand2.toFixed(5)
+        let operandString = operand2Fixed.toString()
+        document.getElementById('displayNums').innerHTML = parseFloat(operandString)
+
+    } else if (operator > 2 && operator < 5 && result === undefined && toDisplay.length > 0) {
+        operand2 = operand2 / 100
+        let operand2Fixed = operand2.toFixed(5)
+        let operandString = operand2Fixed.toString()
+        document.getElementById('displayNums').innerHTML = parseFloat(operandString)
     }
 }
