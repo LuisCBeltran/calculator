@@ -4,6 +4,7 @@ let operand2
 let operator = 0
 let result 
 
+// Little change to push
 // Operators: no operator = 0, + = 1, - = 2, * = 3, / = 4, 
 
 // Write numbers on display
